@@ -152,65 +152,75 @@ https://github.com/AddagallaSatyanarayana/AI5006/tree/master/Assignment1
 and latex-tikz codes from 
 %
 \begin{lstlisting}
-https://github.com/AddagallaSatyanarayana/AI5006/blob/master/Assignment1/Assignment1.tex
+https://github.com/AddagallaSatyanarayana/AI5006/tree/master/Assignment1/Assignment1.tex
 \end{lstlisting}
 %
 \section{Problem}
-\begin{flushleft}
-	Find the vector equation of the line passing through the point $\begin{psmallmatrix}1 \\2 \\-4	\end{psmallmatrix}$
-	and perpendicular to the two lines
-\end{flushleft}
-\begin{flushleft}
-	$\frac{x-8}{3} = \frac{y+19}{-16}= \frac{z-10}{7} $ and
-	$\frac{x-15}{3} = \frac{y-29}{8}= \frac{z-5}{5} $
-\end{flushleft}
+
+Find the vector equation of the line passing through the point $\begin{psmallmatrix}1 \\2 \\-4	\end{psmallmatrix}$
+and perpendicular to the two lines
+   	$\frac{x-8}{3} = \frac{y+19}{-16}= \frac{z-10}{7}$  and
+	$\frac{x-15}{3} = \frac{y-29}{8}= \frac{z-5}{-5}$
+
 \section{Solution}
+Equation of a line $\vec{l}$ passing through the point $\vec{a}$ and parallel to the line $\vec{n}$ is given by:
+\begin{align}
+ \vec{l} =\vec{a} + L\vec{n}   
+\end{align}
+where L is some constant.
+Since the line passes through 
+	$\begin{psmallmatrix}1 \\2\\-4\end{psmallmatrix} $,
+$\vec{a}$ = (1  2 -4)$\vec{x}$
 \begin{flushleft}
-	Equation of a $\overrightarrow{\textbf{l}}$ passing through $\overrightarrow{\textbf{a}}$ and parallel to  $\overrightarrow{\textbf{n}}$ is given by:
+	Let $\vec{n}$ be the normal vector to both lines. If $\vec{m_1}$ and $\vec{m_2}$ are the direction vectors of the lines,then
 \end{flushleft}
-\begin{flushleft}
-	$\overrightarrow{\textbf{l}} =\overrightarrow{\textbf{a}} + L*\overrightarrow{\textbf{n}} $, where L is some constant
-	Since the line passes through 
-	$\begin{psmallmatrix}1 \\2\\-4\end{psmallmatrix} $
-\end{flushleft}
-$\overrightarrow{\textbf{a}} = (i + 2j - 4k)$
-\begin{flushleft}
-	Let $\overrightarrow{\textbf{n}}$ be the normal vector to both lines. If $\overrightarrow{\textbf{m}_1}$ and $\overrightarrow{\textbf{m}_2}$ are the direction vectors of the lines,then
-\end{flushleft}
-\begin{equation}
-\overrightarrow{\textbf{m}_1}^T  \overrightarrow{\textbf{n}} = 0
-\end{equation}
-\begin{equation}
-\overrightarrow{\textbf{m}_2}^T\overrightarrow{\textbf{n}} = 0
-\end{equation}
+\begin{align}
+ \vec{m_1}^T  \vec{n} = 0   
+\end{align}
+\begin{align}
+\vec{m_2}^T\vec{n} = 0    
+\end{align}
+
 \begin{flushleft}
 	Let 
-	$\overrightarrow{\textbf{n}} =\begin{pmatrix} x\\ y\\ z\end{pmatrix} ;$
-	$\overrightarrow{\textbf{m}_1} =\begin{pmatrix} 3 \\-16\\ 7\end{pmatrix}; $
-	$\overrightarrow{\textbf{m}_2} =\begin{pmatrix} 3 \\ 8\\ -5\end{pmatrix} $
+	$\vec{n} =\begin{pmatrix} x\\ y\\ z\end{pmatrix} ;$
+	$\vec{m_1} =\begin{pmatrix} 3 \\-16\\ 7\end{pmatrix}; $
+	$\vec{m_2} =\begin{pmatrix} 3 \\ 8\\ -5\end{pmatrix} $
 \end{flushleft}
 \begin{flushleft}
-	Since  $\overrightarrow{\textbf{n}}$ is perpendicular to $\overrightarrow{\textbf{m}_1}$ and $\overrightarrow{\textbf{m}_2}$
+	Since  $\vec{n}$ is perpendicular to $\vec{m_1}$ and $\vec{m_2}$
 \end{flushleft}
-\begin{equation}
-\ 3x -16y + 7z = 0\
-\end{equation} 
-\begin{equation}
-\ 3x + 8y - 5z = 0\
-\end{equation}
-\begin{flushleft}
-	Solving the equations
-	$\frac{x}{2} = \frac{y}{3}= \frac{z}{6} = K$
-	$ x = 2K , y = 3K , z =6K$
-\end{flushleft}
-\begin{flushleft}
-	$\overrightarrow{\textbf{n}} =K* (2i + 3j + 6k)$
-\end{flushleft}
-\begin{flushleft}
-	so the equation of  $\overrightarrow{\textbf{l}}$ is 	$\overrightarrow{\textbf{l}}=(i + 2j - 4k) + L*K (2i + 3j + 6k)$ ,where L is any constant
-\end{flushleft}
-\begin{center}
-\includegraphics[width = .6\textwidth]{assignment1.png}
+\begin{align}
+3x -16y + 7z = 0    
+\end{align}
+\begin{align}
+3x + 8y - 5z = 0   
+\end{align}
+	Solving the equations,
+\begin{align}
+ 	\frac{x}{2} = \frac{y}{3}= \frac{z}{6} = K   
+\end{align}
+\begin{align}
+	x = 2K , y = 3K , z =6K    
+\end{align}
 
-\end{center}
+\begin{align}
+ 	\vec{n} = K(2 3 6)\vec{x}   
+\end{align}
+	So the equation of the required line is
+\begin{align}
+ \vec{l} =(1  2  4) \vec{x}  + L (2  3 6)\vec{x}   
+\end{align}
+   where L is any constant.
+\begin{align}   
+   \vec{l} =\begin{pmatrix} 1\\ 2\\ -4\end{pmatrix} + L
+   \begin{pmatrix} 2 \\3\\ 6\end{pmatrix} 
+\end{align}   
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = \columnwidth]{assignment1.png}
+    \caption{Perpendicular Line }
+    \label{fig:1}
+\end{figure}
+
 \end{document}
