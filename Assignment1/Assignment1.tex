@@ -165,12 +165,22 @@ and perpendicular to the two lines
 \section{Solution}
 Equation of a line $\vec{l}$ passing through the point $\vec{a}$ and parallel to the line $\vec{n}$ is given by:
 \begin{align}
- \vec{l} =\vec{a} + L\vec{n}   
+ \vec{l} =\vec{a} + \lambda\vec{n}   
 \end{align}
-where L is some constant.
+where $\lambda$ is some constant.
 Since the line passes through 
 	$\begin{psmallmatrix}1 \\2\\-4\end{psmallmatrix} $,
-$\vec{a}$ = (1  2 -4)$\vec{x}$
+$\vec{a}$ = (1  2 -4)
+
+\begin{align}   
+	\vec{l_1} =\begin{pmatrix} 8\\ -19\\ 10\end{pmatrix} + \lambda
+	\begin{pmatrix} 3 \\-16\\ 7\end{pmatrix} 
+\end{align}
+\begin{align}   
+	\vec{l_2} =\begin{pmatrix}15\\ 29\\ 5\end{pmatrix} + \lambda
+	\begin{pmatrix} 3 \\8\\ -5\end{pmatrix} 
+\end{align}
+
 \begin{flushleft}
 	Let $\vec{n}$ be the normal vector to both lines. If $\vec{m_1}$ and $\vec{m_2}$ are the direction vectors of the lines,then
 \end{flushleft}
@@ -181,41 +191,23 @@ $\vec{a}$ = (1  2 -4)$\vec{x}$
 \vec{m_2}^T\vec{n} = 0    
 \end{align}
 
-\begin{flushleft}
-	Let 
-	$\vec{n} =\begin{pmatrix} x\\ y\\ z\end{pmatrix} ;$
-	$\vec{m_1} =\begin{pmatrix} 3 \\-16\\ 7\end{pmatrix}; $
-	$\vec{m_2} =\begin{pmatrix} 3 \\ 8\\ -5\end{pmatrix} $
-\end{flushleft}
-\begin{flushleft}
-	Since  $\vec{n}$ is perpendicular to $\vec{m_1}$ and $\vec{m_2}$
-\end{flushleft}
-\begin{align}
-3x -16y + 7z = 0    
+\begin{align}   
+	(3 \hspace{0.2cm}-16 \hspace{0.2cm}7)\vec{n}  =0
 \end{align}
-\begin{align}
-3x + 8y - 5z = 0   
-\end{align}
-	Solving the equations,
-\begin{align}
- 	\frac{x}{2} = \frac{y}{3}= \frac{z}{6} = K   
-\end{align}
-\begin{align}
-	x = 2K , y = 3K , z =6K    
+\begin{align}   
+	(3 \hspace{0.2cm}  8 \hspace{0.2cm} -5)\vec{n}  =0 
 \end{align}
 
-\begin{align}
- 	\vec{n} = K(2 3 6)\vec{x}   
-\end{align}
-	So the equation of the required line is
-\begin{align}
- \vec{l} =(1  2  4) \vec{x}  + L (2  3 6)\vec{x}   
-\end{align}
-   where L is any constant.
 \begin{align}   
-   \vec{l} =\begin{pmatrix} 1\\ 2\\ -4\end{pmatrix} + L
+	\vec{n} = (2\hspace{0.2cm} 3\hspace{0.2cm} 6) 
+\end{align} 
+
+\begin{align}   
+   \vec{l} =\begin{pmatrix} 1\\ 2\\ -4\end{pmatrix} + \lambda
    \begin{pmatrix} 2 \\3\\ 6\end{pmatrix} 
-\end{align}   
+\end{align} 
+where $\lambda$ is any constant. 
+ 
 \begin{figure}[h]
     \centering
     \includegraphics[width = \columnwidth]{assignment1.png}
