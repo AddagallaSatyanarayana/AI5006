@@ -174,12 +174,12 @@ Since the line passes through
 $\vec{a}$ = (1  2 -4)
 
 \begin{align}   
-\vec{l_1} =\begin{pmatrix} 8\\ -19\\ 10\end{pmatrix} + \lambda_1
-	\begin{pmatrix} 3 \\-16\\ 7\end{pmatrix} ;
+\vec{x} =\begin{pmatrix} 8\\ -19\\ 10\end{pmatrix} + \lambda_1
+	\begin{pmatrix} 3 \\-16\\ 7\end{pmatrix} 
 \end{align}
 
 \begin{align} 
- \vec{l_2} =\begin{pmatrix}15\\ 29\\ 5\end{pmatrix} + \lambda_2
+ \vec{x} =\begin{pmatrix}15\\ 29\\ 5\end{pmatrix} + \lambda_2
 	\begin{pmatrix} 3 \\8\\ -5\end{pmatrix} 
 \end{align}
 \section{Solution}
@@ -192,72 +192,34 @@ $\vec{a}$ = (1  2 -4)
 \begin{align}
 \vec{m_2}^T\vec{n} = 0    
 \end{align}
-Let $A$ be a point on line $l_1$ and $B$ be point on the line $l_2$.\par
-The vector passing through the points $A$ and $B$ will be
-\begin{align}
-	\vec{A-B}=\vec{x_1-x_2}+\myvec{\vec{m_1} & -\vec{m_2}}\myvec{\lambda_1\\\lambda_2}
-\end{align}
-The vectors $\vec{m_1}$,$\vec{m_2}$ are both perpendicular to the line ${AB}$.So the dot product of $\vec{m_1}$,$\vec{m_2}$ with the line ${AB}$ is zero.\par
-The dot product of $\vec{m_1}$ with the line ${AB}$ is
-\begin{align}
-	\vec{m_1}^T\brak{\vec{A-B}}=0\label{eq:32}\\
-	\vec{m_1^T}(\vec{x_1-x_2})+\vec{m_1^T}(\vec{m_1} & -\vec{m_2})\begin{pmatrix}\lambda_1 \\ \lambda_2\end{pmatrix}=0
-\end{align}
-The dot product of $\vec{m_2}$ with the line ${AB}$ is
-\begin{align}
-	\vec{m_2}^T\brak{\vec{A-B}}=0\label{eq:34}\\
-	\vec{m_2^T}(\vec{x_1-x_2})+\vec{m_2^T}(\vec{m_1} & -\vec{m_2})\myvec{\lambda_1 \\ \lambda_2}=0
-\end{align}
 Let the matrix $\vec{M}$ be
 \begin{align}
 	\vec{M}=\myvec{\vec{m_1}^T\\\vec{m_2}^T}
 \end{align}
-Combining the equations in matrix form,using equation we get
+$\vec{m_1}=\myvec{3\\-16\\7} ,  \vec{m_2}=\myvec{3\\8\\-5},\vec{n}=\myvec{n_1\\n_2\\n_3} $
 \begin{align}
-	\vec{M}\vec{M}^T\myvec{\lambda_1\\-\lambda_2}+\vec{M}\vec{(x_1-x_2)}=0
-\end{align}
-
-\begin{align}
-	\vec{M}\vec{M}^T\begin{pmatrix}\lambda_1\\-\lambda_2\end{pmatrix}=\vec{M}\vec{(x_2-x_1)}
+	\vec{M}\vec{n}=0
 \end{align}
 \begin{align}
-	\myvec{\vec{m_1}^T\vec{m_1} & \vec{m_1}^T\vec{m_2}\\\vec{m_2}^T\vec{m_1} & \vec{m_2}^T\vec{m_2}}\myvec{\lambda_1\\-\lambda_2}=\myvec{\vec{m_1}^T\vec{(x_2-x_1)}\\\vec{m_2}^T\vec{(x_2-x_1)}}
-\end{align}
-\begin{align}
-	\myvec{\vec{m_1}^T\vec{m_1} & \vec{m_1}^T\vec{m_2} & \vec{m_1}^T\vec{(x_2-x_1)}\\\vec{m_2}^T\vec{m_1} & \vec{m_2}^T\vec{m_2} & \vec{m_2}^T\vec{(x_2-x_1)}}
-\end{align}
-\begin{align}
-	\intertext{Given}
-	\vec{x_1}=\myvec{8\\-19\\10},\vec{x_2}=\myvec{15\\29\\5},\vec{m_1}=\myvec{3\\-16\\7} ,  \vec{m_2}=\myvec{3\\8\\-5}
 	\intertext{The augmented matrix is}
-	\myvec{314 & -154 & -782\\ -154 & 98 & 430}\\
-	\myvec{314 & -154 &-782\\ -154 & 98 & 430}\xleftrightarrow{R_1=\frac{R_1}{2},R_2=\frac{R_2}{2}}\myvec{157 & -77 &-391\\ -77 & 49 & 215}\\
-	\myvec{157 & -77 &-391\\ -77 & 49 & 215}\xleftrightarrow{R_1=R_2+\frac{R_1}{0.49}}\myvec{157 & -77 &-391\\ 0 & 11.24 & 23.24}\\
-	\myvec{157 & -77 &-391\\ 0 & 11.24 & 23.24}\xleftrightarrow{R_1=\frac{R_1}{6.85}+R_2}\myvec{22.92 & 0 & -33.84\\ 0 & 11.24 & 23.24}\\
-	\myvec{22.92 & 0 & -33.84\\ 0 & 11.24 & 23.24}\xleftrightarrow{R_1=\frac{R_1}{22.92},R_2 =\frac{R_1}{11.24}}\myvec{1 & 0 & -1.48\\ 0 & 1 & 2.07}
+	\myvec{3 & -16 & 7 & 0\\ 3 & 8 & -5 & 0}\\
+	\myvec{3 & -16 & 7 & 0\\ 3 & 8 & -5 &  0} \xleftrightarrow{R_2=R_1-R_2}\myvec{3 & -16 & 7 & 0\\ 0 & -24 & 12 & 0}\\
+	\myvec{3 & -16 & 7 & 0\\ 0 & -24 & 12 & 0}\xleftrightarrow{R_2=\frac{R_2}{2}}\myvec{3 & -16 & 7 & 0\\ 0 & -2 & 1 & 0}\\
+	\myvec{3 & -16 & 7 & 0\\ 0 & -2 & 1 & 0}\xleftrightarrow{R_1=R_1 -8R_2}\myvec{3 & 0 & -1 & 0\\ 0 & -2 & 1 & 0}
 \end{align}
+We have 2 equations and 3 unknowns , we will have parametric solution\par
+Let $n_3$= k ,then $n_1 =  \frac{k}{3}$ and $n_2 =  \frac{k}{3}$
 \begin{align}
-	\lambda_1=-1.48,\lambda_2=2.07
+	\vec{n} = \myvec{\frac{k}{3} \\ \frac{k}{2} \\k} =\frac{k}{6} \myvec{2 \\ 3 \\6}
 \end{align}
-Using the equation $(2.0.2)$ and $(2.0.3)$, we get the points as $A=\myvec{3.56\\4.68\\-0.36}$ and $B=\myvec{8.79\\12.44\\15.35}$ on the line $l_1$,$l_2$ respectively.\par
-
-Direction of line AB $=\myvec{5.22449\\7.83673\\15.6735}$\par
-Unit vector along AB
-\begin{align}
-	\vec{n}=\frac{\vec{A-B}}{\norm{\vec{A-B}}}
-\end{align}
-Unit vector of AB = $ \myvec{0.285714\\0.428571\\0.857143}$\par
-\par
-
 The equation of required line from equation $(2.0.1)$ \par
 \begin{align}
-	\vec{l_1} =\myvec{1\\2\\-4} + \lambda\myvec{0.285714\\0.428571\\0.857143} 
+	\myvec{1\\2\\-4} + \lambda\myvec{2\\3\\6} 
 \end{align}
-
-
-\begin{figure}[t]
+\clearpage
+\begin{figure}[!htbp]
     \centering
-    \includegraphics[width =8cm]{Assignment.png}
+    \includegraphics[width =\columnwidth]{assignment1.png}
     \caption{Perpendicular Line }
     \label{fig:1}
 \end{figure}
