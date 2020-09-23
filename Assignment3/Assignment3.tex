@@ -151,7 +151,7 @@ https://github.com/AddagallaSatyanarayana/AI5006/tree/master/Assignment3/assignm
 \end{lstlisting}
 %
 \section{Problem}
-	Prove that the sum of the squares of the diagonals of parallelogram is equal to the sum of the squares of its sides.
+	Prove that the sum of the squares of diagonals of parallelogram is equal to the sum of the squares of its sides.
 
 
 \section{Explanation}
@@ -167,37 +167,31 @@ Given a parallelogram ABCD we have to prove that
 \end{tikzpicture}
 	
 \begin{multline}
-	\norm{\vec{A-C}}^2 + \norm{\vec{B-D}}^2 =\\ \norm{\vec{A-B}}^2+\norm{\vec{B-C}}^2+\norm{\vec{D-C}}^2+\norm{\vec{A-D}}^2
+	\norm{\vec{A-C}}^2 + \norm{\vec{B-D}}^2 =\\ \norm{\vec{A-B}}^2+\norm{\vec{B-C}}^2+\norm{\vec{D-C}}^2+\norm{\vec{A-D}}^2\label{eq:1}
 \end{multline}
-In the parallelogram $ABCD$ ,let 
-\begin{align}
-	\vec{a} = \vec{A-D}\\
-	\vec{b}=\vec{D-C} \label{eq:1}
-\end{align}
 
 \section{Solution}
-If $ \vec{a}$ and $\vec{b}$ represent the sides of the parallelogram then,the diagonals are
+ The diagonals of  parallelogram are
 \begin{align}
-	\vec{A-C} = \vec{a} +\vec{b}\\
-	\vec{B-D} = \vec{a} -\vec{b}
+	\vec{A-C} = (\vec{A-D}) +(\vec{D-C})\\
+	\vec{B-D} = (\vec{A-D}) -(\vec{A-B})
 \end{align} 
 The sum  of the squares of diagonals is
-\begin{align}
-	{\norm{\vec{A-C}}}^2 +{\norm{\vec{B-D}}}^2 &= \norm{\vec{a} +\vec{b}}^2+ \norm{\vec{a} -\vec{b}}^2\\
-	{\norm{\vec{A-C}}}^2 +{\norm{\vec{B-D}}}^2 &= 2\norm{\vec{a}}^2 +2\norm{\vec{b}}^2\label{eq:2}
-\end{align}
+\begin{multline}
+	{\norm{\vec{A-C}}}^2 +{\norm{\vec{B-D}}}^2 =\\ {\norm{(\vec{A-D}) +(\vec{D-C})}}^2+ {\norm{(\vec{A-D}) +(\vec{A-B})}}^2
+\end{multline}
+\begin{multline}
+	{\norm{\vec{A-C}}}^2 +{\norm{\vec{B-D}}}^2 = \\{\norm{\vec{A-D}}}^2 +{\norm{\vec{D-C}}}^2+2\norm{\vec{A-D}} \norm{\vec{D-C}}+\\ {\norm{\vec{A-D}}}^2+{\norm{\vec{A-B}}}^2-2\norm{\vec{A-D}} \norm{\vec{A-B}}\label{eq:2}
+\end{multline}
 
-from equation \eqref{eq:1} and \eqref{eq:2}
-\begin{align}
-	\norm{\vec{A-C}}^2 + \norm{\vec{B-D}}^2 = 2\norm{\vec{A-D}}^2+2\norm{\vec{D-C}}^2\label{eq:3}
-\end{align}
 In the parallelogram $ABCD$  
 \begin{align}
-	\norm{\vec{a}} = \norm{\vec{A-D}}=\norm{\vec{B-C}}\label{eq:4}\\
-	\norm{\vec{b}}=\norm{\vec{A-B}} = \norm{\vec{D-C}}\label{eq:5}
+	\norm{\vec{A-D}}=\norm{\vec{B-C}}\label{eq:3}\\
+	\norm{\vec{A-B}} = \norm{\vec{D-C}}\label{eq:4}
 \end{align}
-from equation \eqref{eq:3} , \eqref{eq:4} and \eqref{eq:5}
+Simplifying equation \eqref{eq:2},\eqref{eq:3}  and \eqref{eq:4}
 \begin{multline}
-	\norm{\vec{A-C}}^2 + \norm{\vec{B-D}}^2 =\\ \norm{\vec{A-B}}^2+\norm{\vec{B-C}}^2+\norm{\vec{D-C}}^2+\norm{\vec{A-D}}^2
+	\norm{\vec{A-C}}^2 + \norm{\vec{B-D}}^2 =\\ \norm{\vec{A-B}}^2+\norm{\vec{B-C}}^2+\norm{\vec{D-C}}^2+\norm{\vec{A-D}}^2\label{eq:5}
 \end{multline}
+The equations \eqref{eq:1}  and \eqref{eq:5} are same,hence proved
 \end{document}
