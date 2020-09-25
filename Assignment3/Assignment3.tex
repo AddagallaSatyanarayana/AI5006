@@ -178,20 +178,29 @@ Given a parallelogram ABCD we have to prove that
 \end{align} 
 The sum  of the squares of diagonals is
 \begin{multline}
-	{\norm{\vec{A-C}}}^2 +{\norm{\vec{B-D}}}^2 =\\ {\norm{(\vec{A-D}) +(\vec{D-C})}}^2+ {\norm{(\vec{A-D}) +(\vec{A-B})}}^2
+	\norm{\vec{A-C}}^2 +\norm{\vec{B-D}}^2 =\\ \norm{(\vec{A-D}) +(\vec{D-C})}^2+ \norm{(\vec{A-D}) -(\vec{A-B})}^2
 \end{multline}
 \begin{multline}
-	{\norm{\vec{A-C}}}^2 +{\norm{\vec{B-D}}}^2 = \\{\norm{\vec{A-D}}}^2 +{\norm{\vec{D-C}}}^2+2\norm{\vec{A-D}} \norm{\vec{D-C}}+\\ {\norm{\vec{A-D}}}^2+{\norm{\vec{A-B}}}^2-2\norm{\vec{A-D}} \norm{\vec{A-B}}\label{eq:2}
+	\norm{\vec{A-C}}^2 +\norm{\vec{B-D}}^2 = \\\norm{\vec{A-D}}^2 +\norm{\vec{D-C}}^2 + 2{(\vec{A-D})}^T{(\vec{D-C})}+\\ \norm{\vec{A-D}}^2+\norm{\vec{A-B}}^2-2{(\vec{A-D})}^T{(\vec{A-B})}\label{eq:2}
+\end{multline}
+\begin{multline}
+	\norm{\vec{A-C}}^2 +\norm{\vec{B-D}}^2 = \\\norm{\vec{A-D}}^2 +\norm{\vec{D-C}}^2 + 2\norm{\vec{A-D}}\norm{\vec{D-C}}\cos(180\degree-\angle{ADC})+\\ \norm{\vec{A-D}}^2+\norm{\vec{A-B}}^2-2 {\norm{\vec{A-D}}\norm{\vec{A-B}}}\cos\angle{DAB}\label{eq:3}
 \end{multline}
 
 In the parallelogram $ABCD$  
 \begin{align}
-	\norm{\vec{A-D}}=\norm{\vec{B-C}}\label{eq:3}\\
-	\norm{\vec{A-B}} = \norm{\vec{D-C}}\label{eq:4}
+	\norm{\vec{A-D}}=\norm{\vec{B-C}}\label{eq:4}\\
+	\norm{\vec{A-B}} = \norm{\vec{D-C}}\label{eq:5}\\
+	\angle{ADC} + \angle{DAB} = 180\degree\\
+	\angle{DAB} = 180\degree -\angle{ADC} \label{eq:6}
 \end{align}
-Simplifying equation \eqref{eq:2},\eqref{eq:3}  and \eqref{eq:4}
+From equation \eqref{eq:3},\eqref{eq:4},\eqref{eq:5}  and \eqref{eq:6}
 \begin{multline}
-	\norm{\vec{A-C}}^2 + \norm{\vec{B-D}}^2 =\\ \norm{\vec{A-B}}^2+\norm{\vec{B-C}}^2+\norm{\vec{D-C}}^2+\norm{\vec{A-D}}^2\label{eq:5}
+	\norm{\vec{A-C}}^2 +\norm{\vec{B-D}}^2 = \\\norm{\vec{B-C}}^2 +\norm{\vec{D-C}}^2 + 2\norm{\vec{A-D}}\norm{\vec{A-B}}\cos\angle{DAB}+\\ \norm{\vec{A-D}}^2+\norm{\vec{A-B}}^2-2{\norm{\vec{A-D}}\norm{\vec{A-B}}}\cos\angle{DAB}\label{eq:7}
 \end{multline}
-The equations \eqref{eq:1}  and \eqref{eq:5} are same,hence proved
+Simplifying equation \eqref{eq:7}
+\begin{multline}
+	\norm{\vec{A-C}}^2 + \norm{\vec{B-D}}^2 =\\ \norm{\vec{A-B}}^2+\norm{\vec{B-C}}^2+\norm{\vec{D-C}}^2+\norm{\vec{A-D}}^2\label{eq:8}
+\end{multline}
+The equations \eqref{eq:1}  and \eqref{eq:8} are same,hence proved
 \end{document}
