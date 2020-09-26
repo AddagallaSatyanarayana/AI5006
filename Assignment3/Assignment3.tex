@@ -156,15 +156,12 @@ https://github.com/AddagallaSatyanarayana/AI5006/tree/master/Assignment3/assignm
 
 \section{Explanation}
 Given a parallelogram ABCD we have to prove that
-\begin{tikzpicture}	
-	\draw (0,0) node[anchor=north]{$A$}
-	-- (2,4) node[anchor=east]{$B$}
-	-- (6,4) node[anchor=west]{$C$}
-	-- (4,0) node[anchor=north]{$D$}
-	-- cycle;
-	\draw[red][thick] (2,4) -- (4,0) 	-- cycle;
-	\draw[red][thick] (6,4) -- (0,0) 	-- cycle;
-\end{tikzpicture}
+\begin{figure}[!ht]
+	\centering
+	\resizebox{\columnwidth}{!}{\input{Assignment3_fig}}
+	\caption{parallelogram ${ABCD}$}
+	\label{fig1:Parallelogram}
+\end{figure}
 	
 \begin{multline}
 	\norm{\vec{A-C}}^2 + \norm{\vec{B-D}}^2 =\\ \norm{\vec{A-B}}^2+\norm{\vec{B-C}}^2+\norm{\vec{D-C}}^2+\norm{\vec{A-D}}^2\label{eq:1}
@@ -181,7 +178,7 @@ The sum  of the squares of diagonals is
 	\norm{\vec{A-C}}^2 +\norm{\vec{B-D}}^2 =\\ \norm{(\vec{A-D}) +(\vec{D-C})}^2+ \norm{(\vec{A-D}) -(\vec{A-B})}^2
 \end{multline}
 \begin{multline}
-	\norm{\vec{A-C}}^2 +\norm{\vec{B-D}}^2 = \\\norm{\vec{A-D}}^2 +\norm{\vec{D-C}}^2 + 2{(\vec{A-D})}^T{(\vec{D-C})}+\\ \norm{\vec{A-D}}^2+\norm{\vec{A-B}}^2-2{(\vec{A-D})}^T{(\vec{A-B})}\label{eq:2}
+	\norm{\vec{A-C}}^2 +\norm{\vec{B-D}}^2 = \\\norm{\vec{A-D}}^2 +\norm{\vec{D-C}}^2 + 2{(\vec{A-D})}^T{(\vec{D-C})}+\\\norm{\vec{A-D}}^2+\norm{\vec{A-B}}^2-2{(\vec{A-D})}^T{(\vec{A-B})}\label{eq:2}
 \end{multline}
 \begin{multline}
 	\norm{\vec{A-C}}^2 +\norm{\vec{B-D}}^2 = \\\norm{\vec{A-D}}^2 +\norm{\vec{D-C}}^2 + 2\norm{\vec{A-D}}\norm{\vec{D-C}}\cos(180\degree-\angle{ADC})+\\ \norm{\vec{A-D}}^2+\norm{\vec{A-B}}^2-2 {\norm{\vec{A-D}}\norm{\vec{A-B}}}\cos\angle{DAB}\label{eq:3}
@@ -189,10 +186,10 @@ The sum  of the squares of diagonals is
 
 In the parallelogram $ABCD$  
 \begin{align}
-	\norm{\vec{A-D}}=\norm{\vec{B-C}}\label{eq:4}\\
-	\norm{\vec{A-B}} = \norm{\vec{D-C}}\label{eq:5}\\
-	\angle{ADC} + \angle{DAB} = 180\degree\\
-	\angle{DAB} = 180\degree -\angle{ADC} \label{eq:6}
+	\norm{\vec{A-D}}&=\norm{\vec{B-C}}\label{eq:4}\\
+	\norm{\vec{A-B}} &= \norm{\vec{D-C}}\label{eq:5}\\
+	\angle{ADC} + \angle{DAB} &= 180\degree\\
+	\angle{DAB} &= 180\degree -\angle{ADC} \label{eq:6}
 \end{align}
 From equation \eqref{eq:3},\eqref{eq:4},\eqref{eq:5}  and \eqref{eq:6}
 \begin{multline}
@@ -202,5 +199,5 @@ Simplifying equation \eqref{eq:7}
 \begin{multline}
 	\norm{\vec{A-C}}^2 + \norm{\vec{B-D}}^2 =\\ \norm{\vec{A-B}}^2+\norm{\vec{B-C}}^2+\norm{\vec{D-C}}^2+\norm{\vec{A-D}}^2\label{eq:8}
 \end{multline}
-The equations \eqref{eq:1}  and \eqref{eq:8} are same,hence proved
+The equations \eqref{eq:1}  and \eqref{eq:8} are equal,hence proved
 \end{document}
