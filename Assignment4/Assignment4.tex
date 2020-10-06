@@ -151,7 +151,7 @@ https://github.com/AddagallaSatyanarayana/AI5006/tree/master/Assignment4/Assignm
 \end{lstlisting}
 %
 \section{Problem}
-Find the length of the tangent from the point \myvec{7\\4} to the circle
+Find the length of the tangent from the point $\myvec{7\\4}$ to the circle
 \begin{align}
 		 \vec{x}^T\vec{x}- \myvec{4 & 6}\vec{x}+12=0\label{eq:1}
 \end{align}
@@ -189,13 +189,16 @@ let $\vec{a}=\myvec{7\\4}$, then
 \begin{align}
 	\norm{\vec{a-c}}=\sqrt{26}\label{eq:4}
 \end{align}
-from equation \eqref{eq:3} and \eqref{eq:4}
-By pythagoras theorem , length of tangent $\norm{\vec{a-p}}$ is
+
+We know that the $\triangle$ formed by the centre of the circle to the point, the radius from the centre to the point of contact ,and the tangent to the circle from the point make a right triangle.
+Hence in right angle $\triangle{cpa}$
 \begin{align}
-	 \norm{\vec{a-p}}&= \sqrt{\norm{\vec{a-c}}^2 - \norm{\vec{r}}^2}\\
-	 \norm{\vec{a-p}}&=	\sqrt{26 - 1}\\
+	\norm{\vec{a-c}}^2&= \norm{\vec{a-p}}^2 + \norm{\vec{r}}^2\\
+	 \norm{\vec{a-p}}^2&= \norm{\vec{a-c}}^2 - \norm{\vec{r}}^2\\
+	 \norm{\vec{a-p}}^2&=	{26 - 1}\\
 	 \norm{\vec{a-p}}&=\sqrt{25}\\
 	 \norm{\vec{a-p}}&=5
 \end{align}
+The length of the tangent from  point $\myvec{7\\4}$ to the circle is equal to 5.
 
 \end{document}
