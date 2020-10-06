@@ -156,6 +156,10 @@ Find the length of the tangent from the point \myvec{7\\4} to the circle
 		 \vec{x}^T\vec{x}- \myvec{4 & 6}\vec{x}+12=0\label{eq:1}
 \end{align}
 \section{Explanation}
+The general equation of a second degree can be expressed as :
+\begin{align}
+	\vec{x}^T\vec{V}\vec{x}+2\vec{u}^T\vec{x}+f=0\label{gen__quad_eqn}
+\end{align}
 Let the point of intersection of the tangent and the circle be denoted by $\vec{p}$ as shown in figure below.
 
 \begin{figure}[!ht]
@@ -164,19 +168,21 @@ Let the point of intersection of the tangent and the circle be denoted by $\vec{
 	\caption{Tangent to Circle }
 	\label{fig1:Circle-tangent}
 \end{figure}
-Then $\vec{p-a}$ and $\vec{c-p}$ are $\perp$ , $\triangle{cpa}$ is a right angled triangle .
+
 
 \section{Solution}
-The equation of circle with center $\vec{c}$ can be expressed as 
+We know that, for a circle, 
 \begin{align}
-	\vec{x}^T\vec{x}- 2\vec{c}^T\vec{x}+f=0\label{eq:2}
-\end{align} 
-Comparing the equation \eqref{eq:1} and \eqref{eq:2}
+	\vec{V} = \vec{I}  \\
+	\vec{c} = -\vec{u}
+\end{align}
+Comparing the equation \eqref{eq:1} and \eqref{gen__quad_eqn}
 we get
 \begin{align}
-	 \vec{c} = \myvec{2 \\ 3}\\
-	 	 f= 12\\
-	 r = \sqrt{\norm{\vec{c}}^2-f} = \sqrt{13-12}=1\label{eq:3}
+	\vec{u}&=\myvec{-2 \\ -3}, f=12 \\
+	\vec{c}&=\myvec{2 \\ 3}\\
+	 radius &=\sqrt{\vec{u}^T\vec{u}-f}\\
+	 radius &= \sqrt{\norm{\vec{u}}^2-f} = 1\label{eq:3}
 \end{align} 
 
 let $\vec{a}=\myvec{7\\4}$, then 
